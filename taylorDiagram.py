@@ -25,7 +25,7 @@ def TaylorDiagram(RMSVEC, RMSDVEC, CORVEC,COLORVEC,LABELVEC, station, info):
     hh=np.ma.masked_where(hh==-1.0,hh)
     ######################################################
     fig=plt.figure(num=1,figsize=(9.0,9.0),dpi=300,facecolor='w',edgecolor='k')
-    ax = fig.add_axes([0.08, 0.08, 0.8, 0.8], axisbg = '1.0')
+    ax = fig.add_axes([0.08, 0.08, 0.8, 0.8], facecolor = '1.0')
     ax.set_xlabel('Standard Deviation',fontsize='15',weight='bold',color="green")
     ax.set_ylabel('Standard Deviation',fontsize='15',weight='bold',color="green")
     ax.grid(False)
@@ -73,7 +73,7 @@ def TaylorDiagram(RMSVEC, RMSDVEC, CORVEC,COLORVEC,LABELVEC, station, info):
 
     ax.legend(numpoints=1,loc = 'best',prop=dict(size='small'),fontsize=12)
     ax.set_title(station+" "+info,fontsize="20")
-    print "creating "+"taylor"+station+".png"
+    print ("creating "+"taylor"+station+".png")
     plt.savefig("taylor"+station+".png", bbox_inches='tight',dpi=300,facecolor='w',edgecolor='w',orientation='portrait')
     plt.close(1)
     #############################################
